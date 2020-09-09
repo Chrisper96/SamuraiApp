@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SamuraiApp.Domain
 {
-    class SamuraiBattle
+    // Joining table for Samurai and Battle tables
+    public class SamuraiBattle
     {
         public int SamuraiId { get; set; }
         public int BattleId { get; set; }
