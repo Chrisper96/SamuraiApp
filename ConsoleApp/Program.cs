@@ -4,6 +4,7 @@ using SamuraiApp.Domain;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using Newtonsoft.Json.Serialization;
 
 namespace ConsoleApp
 {
@@ -31,10 +32,44 @@ namespace ConsoleApp
             //AddQuoteToExistingSamuraiWhileTracked();
             //AddQuoteToExistingSamuraiNotTracked();
             //AddQuoteToExistingSamuraiNotTracked_Easy();
-            EagerLoadSamuraiWithQuotes();
+            //EagerLoadSamuraiWithQuotes();
+            //ProjectSomeProperties();
+            ProjectSamuraiWithQuotes();
             Console.Write("Press any key...");
             Console.ReadKey();
         }
+
+        private static void ProjectSamuraiWithQuotes()
+        {
+            //var somePropertiesWithQuotes = _context.Samurais.Select(s => new { s.Id, s.Name, s.Quotes }).ToList();
+            //var somePropertiesWithQutoes = _context.Samurais
+            //    .Select(s => new { s.Id, s.Name,
+            //        HappyQuotes = s.Quotes.Where(q => q.Text.Contains("Happy"))})
+            //    .ToList();
+            var somePropertiesWithQutoes = _context.Samurais
+                .Select(s => new {s.Id, s.Name,
+                    HappyQuotes = s.Quotes.Where(q => q.Text.Contains("Happy")) })
+                .ToList();
+        }
+
+        private static void ProjectSomeProperties()
+        {
+            //var someProperties = _context.Samurais.Select(s => new { s.Id, s.Name }).ToList();
+            //var idsAndNames = _context.Samurais.Select(s => new IdAndName(s.Id, s.Name)).ToList();
+        }
+
+        public struct IdAndName
+        {
+            public IdAndName(int id, string name)
+            {
+                Id = id;
+                Name = name;
+            }
+            public int Id;
+            public string Name;
+        }
+
+
 
         private static void EagerLoadSamuraiWithQuotes()
         {
