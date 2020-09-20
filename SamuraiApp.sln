@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiApp.Domain", "SamuraiApp.Domain\SamuraiApp.Domain.csproj", "{13D6EDC0-D624-4537-9B27-BF57EE4916EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamuraiApp.Domain", "SamuraiApp.Domain\SamuraiApp.Domain.csproj", "{13D6EDC0-D624-4537-9B27-BF57EE4916EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiApp.Data", "SamuraiApp.Data\SamuraiApp.Data.csproj", "{05036450-6FD4-4DE0-BC11-96301E573404}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamuraiApp.Data", "SamuraiApp.Data\SamuraiApp.Data.csproj", "{05036450-6FD4-4DE0-BC11-96301E573404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Test\Tests.csproj", "{411D0FC0-575A-473B-A6AB-9CDF5EAD04F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Test\Tests.csproj", "{411D0FC0-575A-473B-A6AB-9CDF5EAD04F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{3F91A258-6C11-4BE4-B68A-EB1B39BFFAA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiAPI", "SamuraiAPI\SamuraiAPI.csproj", "{9B463546-F6B2-44F0-BA9D-0F052C7844BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{411D0FC0-575A-473B-A6AB-9CDF5EAD04F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{411D0FC0-575A-473B-A6AB-9CDF5EAD04F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{411D0FC0-575A-473B-A6AB-9CDF5EAD04F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F91A258-6C11-4BE4-B68A-EB1B39BFFAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F91A258-6C11-4BE4-B68A-EB1B39BFFAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F91A258-6C11-4BE4-B68A-EB1B39BFFAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F91A258-6C11-4BE4-B68A-EB1B39BFFAA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B463546-F6B2-44F0-BA9D-0F052C7844BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B463546-F6B2-44F0-BA9D-0F052C7844BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B463546-F6B2-44F0-BA9D-0F052C7844BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B463546-F6B2-44F0-BA9D-0F052C7844BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,24 +14,10 @@ namespace SamuraiApp.Data
         public DbSet<Clan> Clans { get; set; }
         public DbSet<Battle> Battles { get; set; }
 
-        public static readonly ILoggerFactory ConsoleLoggerFactory
-            = LoggerFactory.Create(builder =>
-            {
-                builder
-                .AddFilter((category, level) =>
-                category == DbLoggerCategory.Database.Command.Name
-                && level == LogLevel.Information)
-                .AddConsole();
-            });
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public SamuraiContext(DbContextOptions<SamuraiContext> options)
+            : base(options)
         {
-            optionsBuilder
-                .UseLoggerFactory(ConsoleLoggerFactory)
-                // used to see parameter data prom LINQ statements  
-                .EnableSensitiveDataLogging()
-                .UseSqlServer(
-                "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = SamuraiAppData");
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
